@@ -1,0 +1,20 @@
+{
+  "name": "Observador Premium",
+  "description": "Unlock premium articles!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.observador.pt/*"],
+    "js": ["src/content.js"]
+  }],
+  "icons": {
+    "16": "/images/icon.png",
+    "32": "/images/icon.png",
+    "48": "/images/icon.png",
+    "128": "/images/icon.png"
+  },
+  "permissions": ["activeTab", "tabs"]
+}
